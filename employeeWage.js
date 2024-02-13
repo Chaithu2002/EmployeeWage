@@ -21,3 +21,12 @@ function calculateDailyWage(employee){
         return "employee is absent";
     }
 }
+
+function partTimeWage(employee){
+    if(employee == 'present'){
+        let wage = 4*20;
+        return wage;
+    }else{
+        return "employee is absent";
+    }
+}
