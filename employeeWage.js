@@ -71,4 +71,26 @@ function CalculateMonthWage(){
     return hours * ratePerHour;
 }
 
+// UC 6 code
 
+function calculateWages(){
+    var i = 20;
+    let countHours;
+    let countDays;
+    let wages;
+    while(i<20){
+        let empAttend = employeeAttendance();
+        countHours = 0;
+        countDays = 0;
+        if(empAttend == 'present'){
+            countDays += 1;
+            countHours += 8;
+        }
+        if(countHours == 100 && countDays == 20){
+            wages = 100*20;
+        }
+    }
+
+    return wages;
+    
+}
