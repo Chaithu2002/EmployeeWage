@@ -18,6 +18,6 @@ function calculateDailyWage(employee){
         let dailyWage = 8*20
         return dailyWage;
     }else{
-        return "employee is absent";
+        return "employee is absent"
     }
 }
