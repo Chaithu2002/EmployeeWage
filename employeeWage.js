@@ -11,6 +11,8 @@ function employeeAttendance(){
     
 }
 
+// UC 2 code
+
 let employee = employeeAttendance();
 
 function calculateDailyWage(employee){
@@ -22,6 +24,8 @@ function calculateDailyWage(employee){
     }
 }
 
+// UC 3 code
+
 function partTimeWage(employee){
     if(employee == 'present'){
         let wage = 4*20;
@@ -31,6 +35,7 @@ function partTimeWage(employee){
     }
 }
 
+// UC 4 code
 // solving the above problem using switch statement
 
 let employeeStatus = randomNumber();
@@ -55,3 +60,15 @@ switch(employeeStatus){
         console.log("employee is absent");
         break; 
 }
+
+
+// UC5 Code
+
+function CalculateMonthWage(){
+    let days = 20;
+    let hours = 20*8;
+    let ratePerHour = 20;
+    return hours * ratePerHour;
+}
+
+
