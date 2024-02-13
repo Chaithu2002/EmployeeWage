@@ -30,3 +30,28 @@ function partTimeWage(employee){
         return "employee is absent";
     }
 }
+
+// solving the above problem using switch statement
+
+let employeeStatus = randomNumber();
+
+function randomNumber(){
+    return Math.round(Math.random()*1);
+}
+
+switch(employeeStatus){
+    case 1:
+        console.log("employee is present");
+        let partTime = Math.round(Math.random()*4);
+        if(partTime == 4){
+            let wage = 4*20;
+            console.log(`employee Daily wage is ${wage} rupees`);
+        }else{
+            let wage = 8*20;
+            console.log(`employee Daily wage is ${wage} rupees`);
+        }
+        break;
+    case 0:
+        console.log("employee is absent");
+        break; 
+}
