@@ -1,6 +1,6 @@
 console.log("Welcome to Employee Wage Computation Program on Master Branch");
 
-// calculating wages for a month
+// calculating wages for a month if hours 200 and days 20
 
 function employeeWage(){
 
@@ -9,6 +9,7 @@ function employeeWage(){
     var partTimeDays = 0;
     var fullTimeDays = 0;
     var totalMonthWage = 0;
+    var totalHours = 0;
     
     // while loop for calculating the employee total wages and no of days present full time or part time.
     
@@ -25,9 +26,9 @@ function employeeWage(){
         
         if(empAttendance() == 1){
             presentDays++;
-            // checking if employee has present for 20 days
-            if(presentDays == 20){
-                return totalMonthWage;
+            // checking if employee has present for 20 days and 100 hours
+            if(presentDays == 20 && totalHours == 100){
+                return `employee wages for 20 days and 100 hours is ${totalMonthWage}`;
             }
             
             // calculating wage for part time hours
@@ -36,12 +37,14 @@ function employeeWage(){
                 let wage = partTimeWage;
                 totalMonthWage += wage;
                 partTimeDays++;
+                totalHours += 4;
             }
             // calculating wages for full time hours
             else{
                 let wage = fullTimeWage;
                 totalMonthWage += wage;
                 fullTimeDays++;
+                totalHours += 8;
             }
         }
         day++;
